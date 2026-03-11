@@ -1,5 +1,5 @@
 #include <iostream>
-using namspace std;
+using namespace std;
 
 void input( int& hours24, int& minutes);
 void output( int hours, int minutes);
@@ -44,3 +44,25 @@ int main()
   return 0;
 }
 
+// Function to input time in HH:MM format
+void input( int& hours24, int& minutes)
+{
+    char colon;
+
+    cout << "Enter 24 hour time in the format HH:MM\n";
+    cin >> hours24 >> colon >> minutes;
+}
+
+// Function to output time in HH:MM format
+void output( int hours, int minutes)
+{
+    cout << "Time in 24 hour format:\n";
+
+    if (hours < 10)
+        cout << "0";
+    cout << hours << ":";
+
+    if (minutes < 10)
+        cout << "0";
+    cout << minutes << endl;
+}
